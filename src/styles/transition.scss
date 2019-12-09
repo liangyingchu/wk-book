@@ -1,0 +1,58 @@
+//globl transition css
+
+/*初始渲染的过渡*/
+@keyframes appear {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.appear-enter-active {
+    animation: appear .5s;
+}
+
+
+/*fade-transform*/
+.fade-transform-enter-active,
+.fade-transform-leave-active {
+    transition: all .5s;
+}
+.fade-transform-enter {
+    opacity: 0;
+    transform: translateX(-30px);
+}
+.fade-transform-leave-to {
+    opacity: 0;
+    transform: translateX(30px);
+}
+
+
+/*enter-slide*/
+.enter-slide-enter-active,
+.enter-slide-leave-active {
+    transition: all .3s ease;
+}
+.enter-slide-enter {
+    opacity: 0;
+    transform: translateX(100%);
+}
+.enter-slide-leave-to {
+    opacity: 0;
+    transform: translateX(-100%);
+}
+
+/*leave-slide*/
+.leave-slide-enter-active,
+.leave-slide-leave-active {
+    transition: all .3s ease;
+}
+.leave-slide-enter {
+    opacity: 0;
+    transform: translateX(-100%);
+}
+.leave-slide-leave-to {
+    opacity: 0;
+    transform: translateX(100%);
+}
